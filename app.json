@@ -1,5 +1,6 @@
 {
   "expo": {
+    "scheme": "epayapp",
     "name": "epayApp",
     "slug": "epayApp",
     "version": "1.0.0",
@@ -8,9 +9,9 @@
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash-icon.png",
+      "image": "./assets/Logo.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#5C2684"
     },
     "ios": {
       "supportsTablet": true
@@ -22,8 +23,12 @@
       },
       "edgeToEdgeEnabled": true
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    }
+"web": {
+  "bundler": "metro",
+  "favicon": "./assets/favicon.png"
+},
+"plugins": [
+  "expo-router"
+]
   }
 }
