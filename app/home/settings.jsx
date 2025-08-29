@@ -1,10 +1,10 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-export default function HomePage() {
+export default function Settings() {
   return (
     <View>
-      <Text>HomePage de show</Text>
+      <Text>Settings</Text>
     </View>
   )
 }
