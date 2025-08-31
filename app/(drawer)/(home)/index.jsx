@@ -3,7 +3,7 @@ import { SafeAreaView, StyleSheet, Text } from "react-native";
 export default function HomeScreen() {
   return (
     <SafeAreaView style={styles.container}>
-      <Text>Home content</Text>
+      <Text className="text-lg font-bold">Home content</Text>
     </SafeAreaView>
   );
 }

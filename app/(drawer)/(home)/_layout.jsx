@@ -35,6 +35,7 @@ export default function TabLayout() {
           },
           headerShadowVisible: false,
           headerRight: () => <NotificationIcon />,
+          // headerLeft: () => <DrawerIcon />,
           headerLeft: () => <DrawerToggleButton />,
           tabBarIcon: ({ color }) => (
             <AntDesign name="home" size={20} color={color} />
