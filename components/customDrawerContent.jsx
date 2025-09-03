@@ -11,7 +11,7 @@ export function CustomDrawerContent(props) {
       <View style={styles.header}>
         <Text style={styles.welcome}>Welcome</Text>
         <View style={{ flexDirection: "row", alignItems: "center", gap: 4, justifyContent: "space-between" }}>
-          <Text style={styles.name}>William Huffman</Text>
+          <Text style={styles.name}>Atauba Gideon</Text>
           <MaterialIcons name="arrow-forward-ios" size={14} color="#5A2184" />
         </View>
         <View style={styles.accountRow}>
@@ -28,19 +28,19 @@ export function CustomDrawerContent(props) {
 const styles = StyleSheet.create({
   header: {
     borderBottomWidth: 1,
-    borderBottomColor: "#dde3fe",
+    borderBottomColor: "#0000000F",
     paddingBottom: 12,
     marginBottom: 8,
     paddingHorizontal: 20,
     gap: 4,
   },
   welcome: {
-    fontSize: 16,
+    fontSize: 14,
     color: "#6b7280", 
     marginBottom: 2,
   },
   name: {
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: "600",
     color: "#000",
     marginBottom: 2,
@@ -55,6 +55,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: "#5A2184",
     marginRight: 4,
+    fontWeight: 'bold'
   },
   accountType: {
     fontSize: 14,

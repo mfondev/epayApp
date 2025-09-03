@@ -3,6 +3,7 @@ import AntDesign from "@expo/vector-icons/AntDesign";
 import { Colors } from "../../../constants/Colors";
 import NotificationIcon from "../../../components/ui/notfIcon";
 import { DrawerToggleButton } from "@react-navigation/drawer";
+import DrawerIcon from "../../../components/ui/drawerIcon";
 
 export default function TabLayout() {
   return (
@@ -35,12 +36,12 @@ export default function TabLayout() {
           },
           headerShadowVisible: false,
           headerRight: () => <NotificationIcon />,
-          headerLeft: () => <DrawerToggleButton />,
-          tabBarIcon: ({ color }) => (
+          
+          headerLeft: () => <DrawerIcon />,
+           tabBarIcon: ({ color }) => (
             <AntDesign name="home" size={20} color={color} />
           ),
         }}
-        h
       />
       <Tabs.Screen
         name="transactions"

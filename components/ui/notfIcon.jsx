@@ -11,7 +11,7 @@ export default function NotificationIcon() {
 
 const styles = StyleSheet.create({
   container: {
-    borderColor: "gray",
+    borderColor: "#0000000F",
     borderWidth: 1,
     borderRadius: 6,
     padding: 5,
