@@ -1,10 +1,10 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-export default function Support() {
+export default function QuickLoan() {
   return (
     <View>
-      <Text>support</Text>
+      <Text>quick-loan</Text>
     </View>
   )
 }

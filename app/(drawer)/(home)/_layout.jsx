@@ -2,7 +2,6 @@ import { Tabs } from "expo-router";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import { Colors } from "../../../constants/Colors";
 import NotificationIcon from "../../../components/ui/notfIcon";
-import Drawer from "expo-router/drawer";
 import { DrawerToggleButton } from "@react-navigation/drawer";
 
 export default function TabLayout() {
@@ -23,7 +22,8 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: "FNBC",
+          title: "Home",
+          headerTitle: "FNBC",
           headerTitleStyle: {
             color: Colors.primary,
             fontWeight: "bold",
@@ -35,7 +35,6 @@ export default function TabLayout() {
           },
           headerShadowVisible: false,
           headerRight: () => <NotificationIcon />,
-          // headerLeft: () => <DrawerIcon />,
           headerLeft: () => <DrawerToggleButton />,
           tabBarIcon: ({ color }) => (
             <AntDesign name="home" size={20} color={color} />
