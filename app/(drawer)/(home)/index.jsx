@@ -1,12 +1,16 @@
-import { SafeAreaView, StyleSheet, TextInput, View } from "react-native";
-import CardScroll from "../../../components/cardScroll";
+import { SafeAreaView, StyleSheet, Text, View } from "react-native";
+import CardScroll from "../../../components/home/cardScroll";
 import { Colors } from "../../../constants/Colors";
+import QuickAccess from "../../../components/home/quick-access";
+import Transaction from "../../../components/home/transaction";
 
 export default function HomeScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.background} />
       <CardScroll />
+      <QuickAccess />
+      <Transaction />
     </SafeAreaView>
   );
 }
@@ -26,5 +30,4 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
   },
-
 });

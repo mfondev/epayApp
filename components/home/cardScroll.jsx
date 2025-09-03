@@ -12,8 +12,6 @@ export default function CardScroll() {
           gap: 10,
           paddingHorizontal: 20,
           paddingTop: 10,
-        //   height: 180,
-          // width: "100%",
         }}
       >
         <Card
