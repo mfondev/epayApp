@@ -11,11 +11,11 @@ export function CustomDrawerContent(props) {
       <View style={styles.header}>
         <Text style={styles.welcome}>Welcome</Text>
         <View style={{ flexDirection: "row", alignItems: "center", gap: 4, justifyContent: "space-between" }}>
-          <Text style={styles.name}>Atauba Gideon</Text>
+          <Text style={styles.name}>John Davis Howman</Text>
           <MaterialIcons name="arrow-forward-ios" size={14} color="#5A2184" />
         </View>
         <View style={styles.accountRow}>
-          <Text style={styles.accountNo}>A/C No: 2214322068</Text>
+          <Text style={styles.accountNo}>A/C No: 83914615249</Text>
           <MaterialIcons name="content-copy" size={14} color="black" />
         </View>
         <Text style={styles.accountType}>1 Account - Personal</Text>

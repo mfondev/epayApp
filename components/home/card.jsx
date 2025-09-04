@@ -1,18 +1,27 @@
-import { StyleSheet, Text, View } from "react-native";
-import React from "react";
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import React, { useState } from "react";
 import { Colors } from "../../constants/Colors";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 
 export default function Card({ accountType, balance, name, accountNumber }) {
+  const [showBalance, setShowBalance] = useState(true);
   return (
     <View style={styles.container}>
       <Text style={styles.accountType}>{accountType}</Text>
       <View style={styles.balanceContainer}>
         <FontAwesome6 name="naira-sign" size={15} color="white" />
-        <Text style={styles.balance}>{balance}</Text>
-        <FontAwesome name="eye" size={20} color="white" />
+        <Text style={styles.balance}>
+          {showBalance ? balance : "*********"}
+        </Text>
+        <TouchableOpacity onPress={() => setShowBalance(!showBalance)}>
+          <FontAwesome
+            name={showBalance ? "eye" : "eye-slash"}
+            size={20}
+            color="white"
+          />
+        </TouchableOpacity>
       </View>
       <View style={styles.nameContainer}>
         <Text style={styles.name}>{name}</Text>
@@ -24,6 +33,7 @@ export default function Card({ accountType, balance, name, accountNumber }) {
     </View>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {

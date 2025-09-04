@@ -17,14 +17,14 @@ export default function CardScroll() {
         <Card
           accountType="Basic Current Account"
           balance="8,192,135.66"
-          name="John Howman"
-          accountNumber="123456789"
+          name="John Davis Howman"
+          accountNumber="83914615249"
         />
         <Card
-          accountType="Basic Current Account"
-          balance="8,192,135.66"
-          name="John Howman"
-          accountNumber="123456789"
+          accountType="Savings Account"
+          balance="2,553,213.00"
+          name="John Davis Howman"
+          accountNumber="83914615249"
         />
       </ScrollView>
       <SearchBar />
