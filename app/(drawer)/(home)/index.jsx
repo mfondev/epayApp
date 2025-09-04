@@ -1,4 +1,4 @@
-import { SafeAreaView, StyleSheet, Text, View } from "react-native";
+import { SafeAreaView, StyleSheet,ScrollView, Text, View } from "react-native";
 import CardScroll from "../../../components/home/cardScroll";
 import { Colors } from "../../../constants/Colors";
 import QuickAccess from "../../../components/home/quick-access";

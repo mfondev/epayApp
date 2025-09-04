@@ -11,6 +11,8 @@ import TopUpIcon from "../../assets/icons/topUp.svg";
 import LocatorIcon from "../../assets/icons/locator.svg";
 import ContactIcon from "../../assets/icons/contact.svg";
 import ReferIcon from "../../assets/icons/refer.svg";
+import { TouchableOpacity, View } from "react-native";
+import Ionicons from "@expo/vector-icons/Ionicons";
 
 const drawerScreens = [
   {
@@ -99,11 +101,32 @@ export default function Layout() {
         <Drawer.Screen
           key={screen.name}
           name={screen.name}
-          options={{
+          options={({ navigation }) => ({
             title: screen.title,
+            // drawerLabel: () => (
+            //   <View style={{ flexDirection: "row", alignItems: "center" }}>
+            //     <Text style={{ fontSize: 14 }}>{screen.title}</Text>
+            //     <Ionicons
+            //       name="chevron-forward"
+            //       size={16}
+            //       color="#5C2684"
+            //       style={{ marginLeft: 6 }}
+            //     />
+            //   </View>
+            // ),
             headerTitle: screen.headerTitle,
             drawerIcon: () => <screen.Icon width={20} height={20} />,
-          }}
+            
+
+            headerLeft: () => (
+              <TouchableOpacity
+                onPress={() => navigation.goBack()}
+                style={{ marginLeft: 10 }}
+              >
+                <Ionicons name="arrow-back" size={20} color="#5C2684" />
+              </TouchableOpacity>
+            ),
+          })}
         />
       ))}
     </Drawer>

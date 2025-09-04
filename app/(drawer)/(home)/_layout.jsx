@@ -46,7 +46,8 @@ export default function TabLayout() {
       <Tabs.Screen
         name="transactions"
         options={{
-          title: "Transactions",
+          title: "Transaction",
+          headerTitle: "Transaction History",
           tabBarIcon: ({ color }) => (
             <AntDesign name="linechart" size={20} color={color} />
           ),
