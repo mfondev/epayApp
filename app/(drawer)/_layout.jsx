@@ -1,5 +1,4 @@
 import { Drawer } from "expo-router/drawer";
-import { Image } from "react-native";
 import { CustomDrawerContent } from "../../components/customDrawerContent";
 import PersonIcon from "../../assets/icons/person.svg";
 import TransferIcon from "../../assets/icons/transfer.svg";
@@ -11,7 +10,7 @@ import TopUpIcon from "../../assets/icons/topUp.svg";
 import LocatorIcon from "../../assets/icons/locator.svg";
 import ContactIcon from "../../assets/icons/contact.svg";
 import ReferIcon from "../../assets/icons/refer.svg";
-import { TouchableOpacity, View } from "react-native";
+import { TouchableOpacity, View, Text } from "react-native";
 import Ionicons from "@expo/vector-icons/Ionicons";
 
 const drawerScreens = [
@@ -103,21 +102,19 @@ export default function Layout() {
           name={screen.name}
           options={({ navigation }) => ({
             title: screen.title,
-            // drawerLabel: () => (
-            //   <View style={{ flexDirection: "row", alignItems: "center" }}>
-            //     <Text style={{ fontSize: 14 }}>{screen.title}</Text>
-            //     <Ionicons
-            //       name="chevron-forward"
-            //       size={16}
-            //       color="#5C2684"
-            //       style={{ marginLeft: 6 }}
-            //     />
-            //   </View>
-            // ),
+            drawerLabel: ({ color }) => (
+              <View style={{ flexDirection: "row", alignItems: "center" ,justifyContent:"space-between"}}>
+                <Text style={{ color: 'black', fontSize: 16 }}>{screen.title}</Text>
+                <Ionicons
+                  name="chevron-forward"
+                  size={16}
+                  color='#5C2684'
+                  style={{ marginLeft: 5 }}
+                />
+              </View>
+            ),
             headerTitle: screen.headerTitle,
             drawerIcon: () => <screen.Icon width={20} height={20} />,
-            
-
             headerLeft: () => (
               <TouchableOpacity
                 onPress={() => navigation.goBack()}
